@@ -10,7 +10,7 @@ class Tierlist(models.Model):
     date = models.DateField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     game = models.ForeignKey('Game', on_delete=models.CASCADE)
-
+        
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     twitterAccount = models.TextField(blank=True, null=True)
